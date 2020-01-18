@@ -3,4 +3,7 @@
     <color name="colorPrimary">#EDDC1F</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="signInBg">#FCE205</color>
+    <color name="rndBtnYellow">#FCF4A3</color>
 </resources>

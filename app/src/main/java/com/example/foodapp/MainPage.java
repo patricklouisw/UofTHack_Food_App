@@ -20,10 +20,14 @@ public class MainPage extends AppCompatActivity {
     }
 
     public void toPoints(View view) {
+        Intent i = new Intent(MainPage.this, UserPoints.class);
+        startActivity(i);
 
     }
 
     public void toLeaderboard(View view) {
+        Intent i = new Intent(MainPage.this, Leaderboard.class);
+        startActivity(i);
 
     }
 
