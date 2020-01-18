@@ -5,4 +5,6 @@
     <string name="username">username</string>
     <string name="password">password</string>
     <string name="signup">Sign Up!</string>
+    <string name="mouthsfeed">people fed!</string>
+    <string name="zero">0</string>
 </resources>
