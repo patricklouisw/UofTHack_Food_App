@@ -4,64 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FBC02D"
+    android:background="@color/orange"
     tools:context=".Leaderboard">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="225dp"
-        android:layout_height="67dp"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/Leaderboard"
-        android:textAlignment="center"
-        android:textColor="#FA070606"
-        android:textSize="36sp"
+    <View
+        android:id="@+id/topDivider"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/rndBtnYellow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.569"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="44dp" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mainFoodtopia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Leaderboard"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/leaderboard"
         android:layout_width="406dp"
         android:layout_height="278dp"
-        android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/topDivider"
+        app:layout_constraintVertical_bias="0.100000024"
         app:srcCompat="@drawable/leaderboardbars" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/firstPlace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        android:text="TextView"
+        android:text="1st"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/leaderboard"
+        app:layout_constraintEnd_toEndOf="@+id/leaderboard"
+        app:layout_constraintStart_toStartOf="@+id/leaderboard"
+        app:layout_constraintTop_toTopOf="@+id/leaderboard" />
+
+    <TextView
+        android:id="@+id/secondPlace"
+        android:layout_width="61dp"
+        android:layout_height="44dp"
+        android:text="2nd"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/leaderboard"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintStart_toEndOf="@+id/firstPlace"
+        app:layout_constraintTop_toBottomOf="@+id/firstPlace" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/thirdPlace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="3th"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="268dp"
-        tools:layout_editor_absoluteY="333dp" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:text="TextView"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/leaderboard"
+        app:layout_constraintEnd_toStartOf="@+id/firstPlace"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.477" />
+        app:layout_constraintTop_toBottomOf="@+id/firstPlace" />
 </androidx.constraintlayout.widget.ConstraintLayout>
