@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFCD72"
+    tools:context=".MainPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="410dp"
+        android:layout_height="210dp"
+        android:background="#7B1FA2"
+        android:backgroundTint="#F8F4F4"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="520dp">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="131dp"
+            android:layout_height="139dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="?android:attr/panelBackground"
+            android:onClick="toPoints"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.492"
+            app:srcCompat="@drawable/points" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="126dp"
+            android:layout_height="140dp"
+            android:backgroundTint="?android:attr/panelBackground"
+            android:onClick="toLeaderboard"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/leaderboard" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="114dp"
+            android:layout_height="139dp"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="toMainActivity"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.521"
+            app:srcCompat="@drawable/logout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="408dp"
+        android:layout_height="341dp"
+        android:layout_marginBottom="100dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:backgroundTint="@color/signInBg"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/tray" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="242dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="37dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/mouthsfeed"
+        android:textAlignment="center"
+        android:textColor="#0F0E0E"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="121dp"
+        android:layout_height="36dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textColor="#030303"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="188dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
