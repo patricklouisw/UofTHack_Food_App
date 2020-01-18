@@ -9,9 +9,11 @@ import android.widget.Button;
 
 public class SignIn extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnLogIn;
+    private Intent intent;
 
-    Button btnSignUp;
+    private Button btnLogIn;
+
+    private Button btnSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +23,21 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
         btnLogIn = findViewById(R.id.btnLogIn);
         btnSignUp = findViewById(R.id.btnSignUp);
 
-
+        btnLogIn.setOnClickListener(this);
+        btnSignUp.setOnClickListener(this);
     }
 
 
     @Override
     public void onClick(View view) {
-
+        switch (view.getId()) {
+            case R.id.btnLogIn:
+                intent = new Intent(getApplicationContext(), LogIn.class);
+                break;
+            case R.id.btnSignUp:
+                intent = new Intent(getApplicationContext(), SignUp.class);
+                break;
+        }
+        startActivity(intent);
     }
 }
