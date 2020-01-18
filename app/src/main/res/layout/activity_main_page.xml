@@ -18,16 +18,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/mainImage"
         android:layout_width="408dp"
         android:layout_height="341dp"
+        android:layout_marginTop="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:backgroundTint="@color/signInBg"
-        app:layout_constraintBottom_toTopOf="@+id/bottomDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topDivider"
-        app:layout_constraintVertical_bias="0.35000002"
         app:srcCompat="@drawable/tray" />
 
     <TextView
@@ -43,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/mainImage" />
 
     <TextView
         android:id="@+id/textView3"
@@ -54,7 +53,7 @@
         android:textAlignment="center"
         android:textColor="#030303"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintBottom_toBottomOf="@+id/mainImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -64,19 +63,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="Welcome to Food-Topia"
-        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:text="Food-Topia"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/aboutUs"
+        android:id="@+id/about"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="6dp"
+
+        android:text="about us"
+        app:layout_constraintEnd_toStartOf="@+id/impact"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/impact"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
-        android:text="ABOUT US"
+        android:text="See your impact !!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
