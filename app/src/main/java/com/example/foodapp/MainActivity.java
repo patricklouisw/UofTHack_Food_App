@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button btnSignUp;
 
+    private Button btnRestaurantSignUp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnLogIn.setOnClickListener(this);
         btnSignUp.setOnClickListener(this);
+        btnRestaurantSignUp.setOnClickListener(this);
     }
 
 
