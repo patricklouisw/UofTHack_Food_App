@@ -28,7 +28,7 @@ public class UserPoints extends AppCompatActivity {
     }
 
     public void toMainpage(View view){
-        Intent i = new Intent(UserPoints.this, mainPageintent.getClass());
+        Intent i = new Intent(this, MainPage.class);
         startActivity(i);
     }
 }

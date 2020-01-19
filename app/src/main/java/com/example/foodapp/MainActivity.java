@@ -41,7 +41,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(getApplicationContext(), LogIn.class);
                 break;
             case R.id.btnSignUp:
-                intent = new Intent(getApplicationContext(), SignUpRestaurant.class);
+                intent = new Intent(getApplicationContext(), SignUp.class);
+                break;
+            case R.id.restaurantSignUp:
+                intent = new Intent(getApplicationContext(), RestaurantLogIn.class);
                 break;
         }
         intent.putExtra("DATABASE", myDb);

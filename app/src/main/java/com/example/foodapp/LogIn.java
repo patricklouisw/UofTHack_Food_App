@@ -18,11 +18,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class LogIn extends AppCompatActivity {
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.content_main);
 
     }
 
@@ -48,6 +48,11 @@ public class LogIn extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    public void toLogIn(View view) {
+        Intent i = new Intent(LogIn.this, MainPage.class);
+        startActivity(i);
+    }
 
     public void toSignUp(View view) {
         Intent i = new Intent(LogIn.this, SignUp.class);
