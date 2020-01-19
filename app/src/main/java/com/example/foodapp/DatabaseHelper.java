@@ -53,7 +53,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "NAME TEXT, " +
                 "PASSWORD TEXT, " +
                 "EMAIL TEXT, " +
-                "POINTS FLOAT, " +
+                "POINTS INTEGER, " +
                 "VISITS TEXT, " +
                 "QR VARBINARY)";
 
