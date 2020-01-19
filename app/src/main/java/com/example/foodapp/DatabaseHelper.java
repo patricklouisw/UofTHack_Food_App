@@ -115,7 +115,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         };
 
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.query(USER_TABLE, null, whereClause, whereArgs, null, null, null);
+        Cursor cursor = db.query(RESTAURANT_TABLE, null, whereClause, whereArgs, null, null, null);
 
         if (cursor.getCount() == 0)
             return map;
