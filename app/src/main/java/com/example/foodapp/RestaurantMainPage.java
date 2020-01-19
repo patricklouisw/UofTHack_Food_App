@@ -30,13 +30,13 @@ public class RestaurantMainPage extends AppCompatActivity {
     }
 
     public void toLeaderboard(View view) {
-        Intent i = new Intent(RestaurantMainPage.this, Leaderboard.class);
+        Intent i = new Intent(getApplicationContext(), Leaderboard.class);
         i.putExtra("EMAIL", email);
         startActivity(i);
     }
 
     public void toMainActivity(View view) {
-        Intent i = new Intent(RestaurantMainPage.this, MainActivity.class);
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(i);
     }
 
