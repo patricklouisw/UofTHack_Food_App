@@ -47,7 +47,7 @@
         android:id="@+id/textInputEditText"
         android:layout_width="206dp"
         android:layout_height="60dp"
-        android:hint="@string/username"
+        android:hint="@string/email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"

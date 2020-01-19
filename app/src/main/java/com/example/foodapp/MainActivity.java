@@ -8,6 +8,8 @@ import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.Serializable;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     DatabaseHelper myDb;

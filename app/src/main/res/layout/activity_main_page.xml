@@ -71,25 +71,25 @@
 
     <Button
         android:id="@+id/about"
-        android:layout_width="100sp"
+        android:layout_width="120sp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="6dp"
-
         android:onClick="toAbout"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/donate_btn"
         android:text="about us"
-        app:layout_constraintEnd_toStartOf="@+id/impact"
+        app:layout_constraintEnd_toEndOf="@+id/topDivider"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/impact"
-        android:layout_width="100sp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
-        android:text="See your impact !!"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <Button-->
+<!--        android:id="@+id/impact"-->
+<!--        android:layout_width="100sp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:text="See your impact !!"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <View
         android:id="@+id/bottomDivider"
