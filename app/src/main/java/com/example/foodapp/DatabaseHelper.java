@@ -57,7 +57,8 @@ public class DatabaseHelper extends SQLiteOpenHelper implements Serializable {
                 "PASSWORD TEXT, " +
                 "EMAIL TEXT, " +
                 "ADDRESS TEXT, " +
-                "CONTRIBUTION INTEGER, " + ")";
+                "CONTRIBUTION INTEGER, " +
+                "PICKUP TEXT)";
 
         db.execSQL(userTable);
         db.execSQL(restaurantTable);

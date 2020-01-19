@@ -36,9 +36,10 @@ public class SignUp extends AppCompatActivity {
 
             Intent i = new Intent(SignUp.this, MainPage.class);
             startActivity(i);
-        } else {
-            // ...
         }
+//        else {
+//            // ...
+//        }
 
     }
 }
