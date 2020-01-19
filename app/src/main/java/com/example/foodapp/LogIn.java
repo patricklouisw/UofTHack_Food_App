@@ -69,7 +69,7 @@ public class LogIn extends AppCompatActivity {
         m = db.userLogin(email, password);
 
         if (m.isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Something is Empty", Toast.LENGTH_SHORT)
+            Toast.makeText(getApplicationContext(), "The email and password does not match.", Toast.LENGTH_SHORT)
                     .show();
         } else {
             User u1 = new User((String) m.get("name"), (String) m.get("email"));

@@ -15,6 +15,7 @@ public class RestaurantLogIn extends AppCompatActivity {
     }
 
     public void toLogIn(View view) {
+
         Intent i = new Intent(getApplicationContext(), RestaurantMainPage.class);
         startActivity(i);
     }
