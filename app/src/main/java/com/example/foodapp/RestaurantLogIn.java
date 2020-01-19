@@ -32,7 +32,7 @@ public class RestaurantLogIn extends AppCompatActivity {
         DatabaseHelper db = new DatabaseHelper(getApplicationContext());
         Map m = new HashMap();
 
-        m = db.userLogin(email, password);
+        m = db.restaurantLogin(email, password);
 
         if (m.isEmpty()) {
             Toast.makeText(getApplicationContext(), "The email and password does not match.", Toast.LENGTH_SHORT)
