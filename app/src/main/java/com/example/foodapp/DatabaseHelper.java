@@ -212,7 +212,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.query(USER_TABLE, null, null, null, null, null, "POINTS DESC", "10");
+        Cursor cursor = db.query(RESTAURANT_TABLE, null, null, null, null, null, "CONTRIBUTIONS DESC", "10");
 
         if (cursor.getCount() == 0)
             return leaderboard;
