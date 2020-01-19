@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(getApplicationContext(), RestaurantLogIn.class);
                 break;
         }
-        intent.putExtra("DATABASE", myDb);
+//        intent.putExtra("DATABASE", myDb);
         startActivity(intent);
     }
 }

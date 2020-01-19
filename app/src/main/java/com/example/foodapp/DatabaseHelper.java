@@ -82,6 +82,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+
+    //TODO: May need to close db in methods
     /*
     ALL RESTAURANT METHODS
      */
