@@ -120,12 +120,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (cursor.getCount() == 0)
             return map;
 
-        map.put("name", cursor.getString(1));
-        map.put("email", cursor.getString(3));
-        map.put("address", cursor.getString(4));
-        map.put("contribution", cursor.getInt(5));
-        // TODO: How do I get a JSONObject from table?
-        map.put("pickup", cursor.getString(6));
+        while(cursor.moveToNext()) {
+
+            map.put("name", cursor.getString(1));
+            map.put("email", cursor.getString(3));
+            map.put("address", cursor.getString(4));
+            map.put("contribution", cursor.getInt(5));
+            // TODO: How do I get a JSONObject from table?
+            map.put("pickup", cursor.getString(6));
+        }
 
         cursor.close();
         return map;
