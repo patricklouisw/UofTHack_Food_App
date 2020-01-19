@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         myDb = new DatabaseHelper(this);
 
         btnLogIn = findViewById(R.id.btnLogIn);
-        btnSignUp = findViewById(R.id.btnSignUp);
         btnRestaurantSignUp = findViewById(R.id.restaurantSignUp);
 
         btnLogIn.setOnClickListener(this);
@@ -43,9 +42,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.btnLogIn:
                 intent = new Intent(getApplicationContext(), LogIn.class);
-                break;
-            case R.id.btnSignUp:
-                intent = new Intent(getApplicationContext(), SignUp.class);
                 break;
             case R.id.restaurantSignUp:
                 intent = new Intent(getApplicationContext(), RestaurantLogIn.class);
