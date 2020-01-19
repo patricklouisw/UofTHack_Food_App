@@ -86,4 +86,9 @@ public class LogIn extends AppCompatActivity {
         Intent i = new Intent(LogIn.this, SignUp.class);
         startActivity(i);
     }
+
+    public void backToMain(View view) {
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(i);
+    }
 }

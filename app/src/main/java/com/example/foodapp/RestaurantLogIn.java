@@ -50,4 +50,9 @@ public class RestaurantLogIn extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), SignUpRestaurant.class);
         startActivity(i);
     }
+
+    public void backToMain(View view) {
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(i);
+    }
 }

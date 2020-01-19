@@ -47,4 +47,9 @@ public class SignUpRestaurant extends AppCompatActivity {
                     .show();
         }
     }
+
+    public void backToMain(View view) {
+        Intent i = new Intent(getApplicationContext(), RestaurantLogIn.class);
+        startActivity(i);
+    }
 }

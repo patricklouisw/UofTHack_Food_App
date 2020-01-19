@@ -31,9 +31,9 @@ public class Leaderboard extends AppCompatActivity {
 
         List<Map> leaderboard = db.leaderboard();
         
-        firstPlace.setText(String.valueOf(leaderboard.get(0).get("name")) + "\n" + String.valueOf(leaderboard.get(0).get("contribution")));
-        secondPlace.setText(String.valueOf(leaderboard.get(1).get("name")) + "\n" + String.valueOf(leaderboard.get(1).get("contribution")));
-        thirdPlace.setText(String.valueOf(leaderboard.get(2).get("name")) + "\n" + String.valueOf(leaderboard.get(2).get("contribution")));
+        firstPlace.setText(String.valueOf(leaderboard.get(0).get("name")) + String.valueOf(leaderboard.get(0).get("contribution")));
+        secondPlace.setText(String.valueOf(leaderboard.get(1).get("name"))+ String.valueOf(leaderboard.get(1).get("contribution")));
+        thirdPlace.setText(String.valueOf(leaderboard.get(2).get("name")) + String.valueOf(leaderboard.get(2).get("contribution")));
     }
 
     public void toMainpage(View view) {
