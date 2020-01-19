@@ -4,11 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.content.Intent;
 import android.widget.TextView;
 
@@ -42,6 +38,13 @@ public class MainPage extends AppCompatActivity {
         Intent i = new Intent(MainPage.this, MainActivity.class);
         startActivity(i);
     }
+
+    public void toAbout(View view) {
+        Intent i = new Intent(MainPage.this, about.class);
+        startActivity(i);
+    }
+
+
 
 
 }

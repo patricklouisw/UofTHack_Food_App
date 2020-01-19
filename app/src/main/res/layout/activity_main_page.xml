@@ -76,6 +76,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="6dp"
 
+        android:onClick="toAbout"
         android:text="about us"
         app:layout_constraintEnd_toStartOf="@+id/impact"
         app:layout_constraintTop_toTopOf="parent" />
