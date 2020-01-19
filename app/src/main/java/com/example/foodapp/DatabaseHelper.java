@@ -3,11 +3,15 @@ package com.example.foodapp;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import androidx.annotation.Nullable;
 import org.json.JSONObject;
 
-public class DatabaseHelper extends SQLiteOpenHelper {
+import java.io.Serializable;
+
+public class DatabaseHelper extends SQLiteOpenHelper implements Serializable {
 
     public static final String DATABASE_NAME = "app.db";
     public static final String USER_TABLE = "user_table";
@@ -53,8 +57,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "PASSWORD TEXT, " +
                 "EMAIL TEXT, " +
                 "ADDRESS TEXT, " +
-                "CONTRIBUTION INTEGER, " +
-                ")";
+                "CONTRIBUTION INTEGER, " + ")";
 
         db.execSQL(userTable);
         db.execSQL(restaurantTable);
@@ -70,4 +73,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         onCreate(db);
     }
+
 }
