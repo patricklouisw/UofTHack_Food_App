@@ -75,6 +75,7 @@ public class LogIn extends AppCompatActivity {
             User u1 = new User((String) m.get("name"), (String) m.get("email"));
 
             Intent i = new Intent(LogIn.this, MainPage.class);
+            i.putExtra("EMAIL", email);
             startActivity(i);
         }
 

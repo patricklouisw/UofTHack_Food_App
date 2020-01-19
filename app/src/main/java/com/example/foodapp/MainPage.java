@@ -3,6 +3,7 @@ package com.example.foodapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 
 import android.content.Intent;
@@ -16,8 +17,12 @@ public class MainPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
 
+        Intent intent = getIntent();
+        String email = intent.getExtras().getString("EMAIL");
+        DatabaseHelper db = new DatabaseHelper(getApplicationContext());
+
         TextView mouthsFednumber = (TextView) findViewById(R.id.textView3);
-        mouthsFednumber.setText("0");
+        mouthsFednumber.setText(String.valueOf(db.getPoints(email)));
 
     }
 

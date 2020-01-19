@@ -41,7 +41,9 @@ public class SignUp extends AppCompatActivity {
 //            myDb.addUser(name, email, 0, [], " ");
             DatabaseHelper db = new DatabaseHelper(getApplicationContext());
             db.userSignup(n, p, e);
+
             Intent i = new Intent(SignUp.this, MainPage.class);
+            i.putExtra("EMAIL", e);
             startActivity(i);
         } else{
             Toast.makeText(getApplicationContext(), "Password and the Re-typed password are different.", Toast.LENGTH_SHORT)
