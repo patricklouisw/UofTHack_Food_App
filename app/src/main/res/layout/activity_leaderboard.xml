@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/mainFoodtopia"
+        android:id="@+id/leaderboardTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="132dp"
@@ -31,12 +31,11 @@
         android:id="@+id/leaderboard"
         android:layout_width="406dp"
         android:layout_height="278dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topDivider"
-        app:layout_constraintVertical_bias="0.100000024"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:srcCompat="@drawable/leaderboardbars" />
 
     <TextView
@@ -72,4 +71,15 @@
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstPlace" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Most food donated by: "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topDivider" />
 </androidx.constraintlayout.widget.ConstraintLayout>
