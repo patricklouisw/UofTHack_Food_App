@@ -252,8 +252,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (cursor.getCount() == 0)
             return map;
 
-        map.put("name", cursor.getString(1));
-        map.put("email", cursor.getString(3));
+        while(cursor.moveToNext()) {
+            map.put("name", cursor.getString(1));
+            map.put("email", cursor.getString(3));
+        }
 
         cursor.close();
         return map;
