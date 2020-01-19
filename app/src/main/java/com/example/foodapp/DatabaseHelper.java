@@ -208,7 +208,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.query(USER_TABLE, null, null, null, null, null, "POINTS");
+        Cursor cursor = db.query(USER_TABLE, null, null, null, null, null, "POINTS DESC", "10");
 
         if (cursor.getCount() == 0)
             return leaderboard;
