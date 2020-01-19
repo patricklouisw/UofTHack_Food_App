@@ -30,7 +30,7 @@ public class Leaderboard extends AppCompatActivity {
     }
 
     public void toMainpage(View view) {
-        Intent i = new Intent(Leaderboard.this, mainPageintent.getClass());
+        Intent i = new Intent(Leaderboard.this, MainPage.class);
         startActivity(i);
     }
 }

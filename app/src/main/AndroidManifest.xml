@@ -16,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RestaurantMainPage"></activity>
+        <activity android:name=".RestaurantLogIn"></activity>
+        <activity android:name=".SignUpRestaurant" />
+        <activity android:name=".RestaurantMainPage" />
         <activity android:name=".about" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -40,8 +42,7 @@
         <activity android:name=".LogIn" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
