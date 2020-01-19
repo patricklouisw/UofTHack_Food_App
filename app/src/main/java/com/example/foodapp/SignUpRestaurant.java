@@ -40,6 +40,7 @@ public class SignUpRestaurant extends AppCompatActivity {
             db.restaurantSignup(name, password, email, address);
             //Direct this page to Main Page
             Intent i = new Intent(getApplicationContext(), MainPage.class);
+            i.putExtra("EMAIL", email);
             startActivity(i);
         } else {
             Toast.makeText(getApplicationContext(), "Password and the Re-typed password are different.", Toast.LENGTH_SHORT)

@@ -41,6 +41,7 @@ public class RestaurantLogIn extends AppCompatActivity {
             Restaurant r1 = new Restaurant((String) m.get("name"), (String) m.get("email"), (String) m.get("address"));
 
             Intent i = new Intent(getApplicationContext(), RestaurantMainPage.class);
+            i.putExtra("EMAIL", email);
             startActivity(i);
         }
     }
