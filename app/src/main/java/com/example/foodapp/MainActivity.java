@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnLogIn = findViewById(R.id.btnLogIn);
         btnSignUp = findViewById(R.id.btnSignUp);
+        btnRestaurantSignUp = findViewById(R.id.restaurantSignUp);
 
         btnLogIn.setOnClickListener(this);
         btnSignUp.setOnClickListener(this);
