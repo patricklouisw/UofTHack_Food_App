@@ -216,7 +216,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Map map = new HashMap();
 
         while(cursor.moveToNext()) {
-            map.put(cursor.getString(1), cursor.getInt(5));
+            map.put("name", cursor.getString(1));
+            map.put("contribution", cursor.getInt(5));
             leaderboard.add(map);
             map.clear();
         }
