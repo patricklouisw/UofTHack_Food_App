@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -88,6 +89,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     ALL RESTAURANT METHODS
      */
     public boolean restaurantSignup(String name, String password, String email, String address) {
+        Random rand = new Random();
+        int num = rand.nextInt(100);
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -96,6 +99,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(RCOL_3, password);
         contentValues.put(RCOL_4, email);
         contentValues.put(RCOL_5, address);
+        contentValues.put(RCOL_6, num);
 
         long result = db.insert(RESTAURANT_TABLE, null, contentValues);
         if (result == -1)
@@ -233,6 +237,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     ALL USER METHODS
      */
     public boolean userSignup(String name, String password, String email) {
+        Random rand = new Random();
+        int num = rand.nextInt(100);
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -240,6 +246,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(UCOL_2, name);
         contentValues.put(UCOL_3, password);
         contentValues.put(UCOL_4, email);
+        contentValues.put(UCOL_5, num);
 
         long result = db.insert(USER_TABLE, null, contentValues);
 
