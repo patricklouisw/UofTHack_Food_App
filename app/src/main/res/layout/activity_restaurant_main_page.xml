@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBC02D"
+    tools:context=".RestaurantMainPage">
+
+    <View
+        android:id="@+id/topDivider"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/rndBtnYellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mainImage"
+        android:layout_width="408dp"
+        android:layout_height="341dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:backgroundTint="@color/signInBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topDivider"
+        app:srcCompat="@drawable/tray" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="242dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/mouthsfeed"
+        android:textAlignment="center"
+        android:textColor="#0F0E0E"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainImage" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="121dp"
+        android:layout_height="36dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textColor="#030303"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mainFoodtopia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Food-Topia"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/about"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="6dp"
+
+        android:text="about us"
+        app:layout_constraintEnd_toStartOf="@+id/impact"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/impact"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:text="See your impact !!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bottomDivider"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="#F8F4F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="126dp"
+        android:layout_height="140dp"
+        android:backgroundTint="?android:attr/panelBackground"
+        android:onClick="toLeaderboard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottomDivider"
+        app:srcCompat="@drawable/leaderboard" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="114dp"
+        android:layout_height="139dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:onClick="toMainActivity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="@+id/bottomDivider"
+        app:srcCompat="@drawable/logout" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="114dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="?android:attr/panelBackground"
+        android:onClick="toLoactionSearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/findshelter" />
+</androidx.constraintlayout.widget.ConstraintLayout>
