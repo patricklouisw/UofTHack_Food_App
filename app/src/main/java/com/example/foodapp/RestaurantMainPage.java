@@ -39,4 +39,10 @@ public class RestaurantMainPage extends AppCompatActivity {
         Intent i = new Intent(RestaurantMainPage.this, MainActivity.class);
         startActivity(i);
     }
+
+    public void toAbout(View view) {
+        Intent i = new Intent(getApplicationContext(), about.class);
+        i.putExtra("EMAIL", email);
+        startActivity(i);
+    }
 }
