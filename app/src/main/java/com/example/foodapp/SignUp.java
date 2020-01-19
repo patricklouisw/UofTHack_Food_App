@@ -32,11 +32,15 @@ public class SignUp extends AppCompatActivity {
     }
 
     public void toMainpage(View view) {
+
+        String n = String.valueOf(name.getText());
+        String e = String.valueOf(email.getText());
         String p = String.valueOf(password.getText());
         String p2 = String.valueOf(rePassword.getText());
         if (p.equals(p2)) {
 //            myDb.addUser(name, email, 0, [], " ");
-
+            DatabaseHelper db = new DatabaseHelper(getApplicationContext());
+            db.userSignup(n, p, e);
             Intent i = new Intent(SignUp.this, MainPage.class);
             startActivity(i);
         } else{

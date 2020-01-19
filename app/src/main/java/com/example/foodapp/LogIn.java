@@ -16,13 +16,23 @@ import android.widget.EditText;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class LogIn extends AppCompatActivity {
+
+    EditText editTextEmail;
+    EditText editTextPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main);
+
+        editTextEmail = findViewById(R.id.textInputEditText);
+        editTextPassword = findViewById(R.id.editText2);
 
     }
 
@@ -50,8 +60,25 @@ public class LogIn extends AppCompatActivity {
 
 
     public void toLogIn(View view) {
-        Intent i = new Intent(LogIn.this, MainPage.class);
-        startActivity(i);
+        String email = String.valueOf(editTextEmail.getText());
+        String password = String.valueOf(editTextPassword.getText());
+
+        DatabaseHelper db = new DatabaseHelper(getApplicationContext());
+        Map m = new HashMap();
+
+        m = db.userLogin(email, password);
+
+        if (m.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Something is Empty", Toast.LENGTH_SHORT)
+                    .show();
+        } else {
+            User u1 = new User((String) m.get("name"), (String) m.get("email"));
+
+            Intent i = new Intent(LogIn.this, MainPage.class);
+            startActivity(i);
+        }
+
+
     }
 
     public void toSignUp(View view) {
