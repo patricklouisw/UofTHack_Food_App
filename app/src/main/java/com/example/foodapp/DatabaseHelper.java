@@ -223,7 +223,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             map.put("name", cursor.getString(1));
             map.put("contribution", cursor.getInt(5));
             leaderboard.add(map);
-            map.clear();
+            map = new HashMap();
         }
 
         cursor.close();
