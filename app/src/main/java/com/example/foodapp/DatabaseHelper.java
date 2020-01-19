@@ -146,6 +146,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public int getContribution(String email) {
+        int contribution = 0;
+
         String whereClause = "email = ?";
         String[] whereArgs = new String[] {
                 email,
@@ -154,11 +156,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.query(RESTAURANT_TABLE, null, whereClause, whereArgs, null, null, null);
 
-        return cursor.getInt(6);
+        while(cursor.moveToNext()){
+            contribution += cursor.getInt(6);
+        }
+        return contribution;
 
     }
 
     public JSONObject getPickup(String email) throws JSONException {
+        StringBuilder result = new StringBuilder();
+
         String whereClause = "email = ?";
         String[] whereArgs = new String[] {
                 email,
@@ -167,9 +174,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.query(RESTAURANT_TABLE, null, whereClause, whereArgs, null, null, null);
 
-        String result = cursor.getString(6);
+        while(cursor.moveToNext()) {
+            result.append(cursor.getString(6));
+        }
 
-        return new JSONObject(result);
+
+        return new JSONObject(result.toString());
     }
 
     // returns total contribution made by all restaurants
@@ -266,6 +276,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public int getPoints(String email){
+        int points = 0;
+
         String whereClause = "email = ?";
         String[] whereArgs = new String[] {
                 email,
@@ -274,10 +286,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.query(USER_TABLE, null, whereClause, whereArgs, null, null, null);
 
-        return cursor.getInt(4);
+        while(cursor.moveToNext()){
+            points += cursor.getInt(4);
+        }
+        cursor.close();
+        return points;
     }
 
     public JSONObject getVisits(String email) throws JSONException {
+        StringBuilder temp = new StringBuilder();
+
         String whereClause = "email = ?";
         String[] whereArgs = new String[] {
                 email,
@@ -286,8 +304,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.query(USER_TABLE, null, whereClause, whereArgs, null, null, null);
 
-        JSONObject result = new JSONObject(cursor.getString(5));
-
+        while(cursor.moveToNext()){
+            temp.append(cursor.getString(5));
+        }
+        JSONObject result = new JSONObject(temp.toString());
+        cursor.close();
         return result;
     }
 
