@@ -8,5 +8,9 @@
     <string name="mouthsfeed">People Fed!</string>
     <string name="zero">0</string>
     <string name="Leaderboard">Leaderboard</string>
+    <string name="Totalpoints">Total Points</string>
+    <string name="Recently">Recently Visited</string>
+    <string name="donations">Amount Donated</string>
+    <string name="back">Back</string>
     <string name="title_activity_impact">Map</string>
 </resources>
