@@ -64,6 +64,18 @@
         app:layout_constraintTop_toBottomOf="@+id/restaurantAccountEntry" />
 
     <EditText
+        android:id="@+id/restaurantAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Enter Restaurant Address"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantEmailEntry" />
+
+    <EditText
         android:id="@+id/restaurantPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,7 +85,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/restaurantEmailEntry" />
+        app:layout_constraintTop_toBottomOf="@+id/restaurantAddress" />
 
     <EditText
         android:id="@+id/restaurantPassword2"

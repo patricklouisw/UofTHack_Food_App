@@ -12,6 +12,7 @@ public class SignUpRestaurant extends AppCompatActivity {
 
     EditText edtTextRestaurantName;
     EditText edtTextEmailName;
+    EditText edtTextAddress;
     EditText edtTextPassword;
     EditText edtTextRePassword;
 
@@ -22,6 +23,7 @@ public class SignUpRestaurant extends AppCompatActivity {
 
         edtTextRestaurantName = findViewById(R.id.restaurantAccountEntry);
         edtTextEmailName = findViewById(R.id.restaurantEmailEntry);
+        edtTextAddress = findViewById(R.id.restaurantAddress);
         edtTextPassword = findViewById(R.id.restaurantPassword);
         edtTextRePassword = findViewById(R.id.restaurantPassword2);
     }
@@ -31,8 +33,11 @@ public class SignUpRestaurant extends AppCompatActivity {
         String password = String.valueOf(edtTextPassword.getText());
         String rePassword = String.valueOf(edtTextRePassword.getText());
         if(password.equals(rePassword)) {
-            //Need to update database
-
+            String name = String.valueOf(edtTextRestaurantName.getText());
+            String email = String.valueOf(edtTextEmailName.getText());
+            String address = String.valueOf(edtTextAddress.getText());
+            DatabaseHelper db = new DatabaseHelper(getApplicationContext());
+            db.restaurantSignup(name, password, email, address);
             //Direct this page to Main Page
             Intent i = new Intent(getApplicationContext(), MainPage.class);
             startActivity(i);
