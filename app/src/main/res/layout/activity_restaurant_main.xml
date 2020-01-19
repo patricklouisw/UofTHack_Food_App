@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
         android:layout_marginTop="5dp"
-        android:text="As a restaurant owner, \nwe deeply appreciate your partition."
+        android:text="As a restaurant owner, \nwe deeply appreciate your participation."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
