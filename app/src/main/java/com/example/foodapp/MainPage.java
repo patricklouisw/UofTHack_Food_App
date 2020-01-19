@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
+import android.widget.TextView;
+
 
 public class MainPage extends AppCompatActivity {
 
@@ -17,6 +19,10 @@ public class MainPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+
+        TextView mouthsFednumber = (TextView) findViewById(R.id.textView3);
+        mouthsFednumber.setText("0");
+
     }
 
     public void toPoints(View view) {
