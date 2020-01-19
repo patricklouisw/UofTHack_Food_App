@@ -30,7 +30,7 @@ public class Leaderboard extends AppCompatActivity {
         TextView thirdPlace = findViewById(R.id.thirdPlace);
 
         List<Map> leaderboard = db.leaderboard();
-
+        
         firstPlace.setText(String.valueOf(leaderboard.get(0).get("name")) + "\n" + String.valueOf(leaderboard.get(0).get("contribution")));
         secondPlace.setText(String.valueOf(leaderboard.get(1).get("name")) + "\n" + String.valueOf(leaderboard.get(1).get("contribution")));
         thirdPlace.setText(String.valueOf(leaderboard.get(2).get("name")) + "\n" + String.valueOf(leaderboard.get(2).get("contribution")));

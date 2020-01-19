@@ -22,7 +22,7 @@ public class RestaurantMainPage extends AppCompatActivity {
         email = intent.getExtras().getString("EMAIL");
         DatabaseHelper db = new DatabaseHelper(getApplicationContext());
 
-        mouthsFednumber.setText(db.totalContribution());
+        mouthsFednumber.setText(String.valueOf(db.totalContribution()));
     }
 
     public void toLocationSearch(View view) {

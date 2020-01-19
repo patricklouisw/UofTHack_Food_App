@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FBC02D"
+    android:background="@color/orange"
     tools:context=".RestaurantMainPage">
 
     <View
@@ -73,21 +73,21 @@
         android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="6dp"
-
-        android:text="about us"
-        app:layout_constraintEnd_toStartOf="@+id/impact"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/impact"
-        android:layout_width="100sp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
-        android:text="See your impact !!"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/donate_btn"
+        android:text="about us"
+        app:layout_constraintEnd_toEndOf="@+id/topDivider"
         app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <Button-->
+<!--        android:id="@+id/impact"-->
+<!--        android:layout_width="100sp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:text="See your impact !!"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <View
         android:id="@+id/bottomDivider"

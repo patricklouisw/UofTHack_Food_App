@@ -40,37 +40,41 @@
 
     <TextView
         android:id="@+id/firstPlace"
-        android:layout_width="wrap_content"
+        android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:text="1st"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/leaderboard"
         app:layout_constraintEnd_toEndOf="@+id/leaderboard"
         app:layout_constraintStart_toStartOf="@+id/leaderboard"
-        app:layout_constraintTop_toTopOf="@+id/leaderboard" />
+        app:layout_constraintTop_toTopOf="@+id/leaderboard"
+        app:layout_constraintVertical_bias="0.38" />
 
     <TextView
         android:id="@+id/secondPlace"
-        android:layout_width="61dp"
-        android:layout_height="44dp"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
         android:text="2nd"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/leaderboard"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.19"
         app:layout_constraintStart_toEndOf="@+id/firstPlace"
-        app:layout_constraintTop_toBottomOf="@+id/firstPlace" />
+        app:layout_constraintTop_toBottomOf="@+id/firstPlace"
+        app:layout_constraintVertical_bias="0.060000002" />
 
     <TextView
         android:id="@+id/thirdPlace"
-        android:layout_width="wrap_content"
+        android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:text="3th"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/leaderboard"
         app:layout_constraintEnd_toStartOf="@+id/firstPlace"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.67"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstPlace" />
+        app:layout_constraintTop_toBottomOf="@+id/firstPlace"
+        app:layout_constraintVertical_bias="0.32" />
 
     <TextView
         android:id="@+id/textView5"
@@ -87,14 +91,53 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="286dp"
-        android:layout_marginTop="644dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="39dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/donate_btn"
         android:onClick="toMainpage"
         android:text="@string/back"
+        app:layout_constraintEnd_toEndOf="@+id/topDivider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bottomDivider"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@color/rndBtnYellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="4. Pizza Pizza                        3 pt"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/leaderboard" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="5. Pizza Nova                         2 pt"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="6. Palm Lane                          1 pt"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 </androidx.constraintlayout.widget.ConstraintLayout>
