@@ -108,7 +108,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public Map restaurantLogin(String email, String password) {
         Map map = new HashMap();
 
-        String whereClause = "email = ? OR password = ?";
+        String whereClause = "email = ? AND password = ?";
         String[] whereArgs = new String[] {
                 email,
                 password
@@ -243,7 +243,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public Map userLogin(String email, String password) {
         Map map = new HashMap();
 
-        String whereClause = "email = ? OR password = ?";
+        String whereClause = "email = ? AND password = ?";
         String[] whereArgs = new String[] {
                 email,
                 password
