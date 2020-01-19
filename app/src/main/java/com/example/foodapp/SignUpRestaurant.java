@@ -39,7 +39,7 @@ public class SignUpRestaurant extends AppCompatActivity {
             DatabaseHelper db = new DatabaseHelper(getApplicationContext());
             db.restaurantSignup(name, password, email, address);
             //Direct this page to Main Page
-            Intent i = new Intent(getApplicationContext(), MainPage.class);
+            Intent i = new Intent(getApplicationContext(), RestaurantMainPage.class);
             i.putExtra("EMAIL", email);
             startActivity(i);
         } else {
